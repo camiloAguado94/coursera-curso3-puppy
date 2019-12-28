@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FavoritosActivity">
 
     <include
-        android:id="@+id/mi_action_bar"
+        android:id="@id/mi_action_bar"
         layout="@layout/actionbar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_lista_mascotas"
+        android:id="@+id/rv_favoritos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/mi_action_bar" />

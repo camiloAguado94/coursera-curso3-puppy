@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PuppyAplication</string>
+    <string name="desc_foto_mascota">Foto Mascota</string>
+    <string name="tv_nombre_mascota">Nombre de Mascota</string>
+    <string name="numero_likes">99</string>
+    <string name="desc_btn_like">btn like</string>
+    <string name="desc_img_likes">imagen likes</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="av_favoritos">Favoritos</string>
+    <string name="MainLabel">Petagram</string>
+    <string name="FavoritosLabel">Favoritos</string>
 </resources>

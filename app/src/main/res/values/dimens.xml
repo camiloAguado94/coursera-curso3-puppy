@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevacion_action_bar">4dp</dimen>
+    <dimen name="margin_bottom">5dp</dimen>
+    <dimen name="card_corner_radius">5dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="foto_height">200dp</dimen>
+    <dimen name="texto_nombre_tamano">24sp</dimen>
+</resources>

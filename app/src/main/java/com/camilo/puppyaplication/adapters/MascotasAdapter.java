@@ -1,4 +1,4 @@
-package com.camilo.puppyaplication.Adapters;
+package com.camilo.puppyaplication.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.camilo.puppyaplication.POJOs.MascotaPOJO;
+import com.camilo.puppyaplication.pojo.MascotaPOJO;
 import com.camilo.puppyaplication.R;
 
 import java.util.List;

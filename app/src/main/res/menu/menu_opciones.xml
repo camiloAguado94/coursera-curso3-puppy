@@ -2,7 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/about"
+        android:id="@+id/menu_contacto"
+        android:title="@string/menu_contacto" />
+    <item
+        android:id="@+id/menu_about"
         android:title="@string/menu_about" />
     <item
         android:id="@+id/action_view"

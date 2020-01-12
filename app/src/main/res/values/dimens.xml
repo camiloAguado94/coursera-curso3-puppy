@@ -6,4 +6,14 @@
     <dimen name="card_elevation">1dp</dimen>
     <dimen name="foto_height">200dp</dimen>
     <dimen name="texto_nombre_tamano">24sp</dimen>
+    <dimen name="titulo">32sp</dimen>
+    <dimen name="margin_top">32dp</dimen>
+    <dimen name="margin_top_til">24dp</dimen>
+    <dimen name="padding_start">16dp</dimen>
+    <dimen name="padding_end">16dp</dimen>
+    <dimen name="nombre_desa_tamano">34sp</dimen>
+    <dimen name="acercade_tamano">20sp</dimen>
+    <dimen name="perfil_radio">150dp</dimen>
+    <dimen name="tamano_nombre_mascota">32sp</dimen>
+    <dimen name="foto_perfil">150dp</dimen>
 </resources>

@@ -9,4 +9,21 @@
     <string name="av_favoritos">Favoritos</string>
     <string name="MainLabel">Petagram</string>
     <string name="FavoritosLabel">Favoritos</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="titulo_contacto">Contacto</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="hint_comentario">Comentario</string>
+    <string name="btn_enviar_comentario">Enviar Comentario</string>
+    <string name="correo_usr">camilo.aguado.94@gmail.com</string>
+    <string name="correo_pwd">jqcduukqclgjmers</string>
+    <string name="correo_subject">Comentario sobre la aplicacion</string>
+    <string name="ContactoLabel">Contacto</string>
+    <string name="AboutLabel">Acerca de</string>
+    <string name="nombre_desarrollador">Camilo Aguado</string>
+    <string name="sobre_desarrollador">Ingeniero de Sistemas graduado de la Escuela Colombiana de Ingeniería Julio Garavito ( Bogotá D.C., Colombia ).</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_mascota_perfil">Tom</string>
 </resources>

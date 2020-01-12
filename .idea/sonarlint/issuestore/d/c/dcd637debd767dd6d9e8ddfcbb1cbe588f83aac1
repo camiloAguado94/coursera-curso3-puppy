@@ -1,6 +1,6 @@
 
-\"squid:SwitchLastCaseIsDefaultCheck9""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8‰ÌÙĞô-
 nsquid:S13019"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8‰ÌÙĞô-
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ûä°µüÿÿÿÿ
-†squid:S1450"cRemove the "reciclerViewMascotas" field and declare it as a local variable in the relevant methods.(ÛÉù¼ıÿÿÿÿ8¸ã«Ñô-
 Fsquid:S11481"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8·¹ Ñô-
+†squid:S1450"cRemove the "reciclerViewMascotas" field and declare it as a local variable in the relevant methods.(ÛÉù¼ıÿÿÿÿ8¸ã«Ñô-
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ûä°µüÿÿÿÿ
+\"squid:SwitchLastCaseIsDefaultCheck9""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8‰ÌÙĞô-

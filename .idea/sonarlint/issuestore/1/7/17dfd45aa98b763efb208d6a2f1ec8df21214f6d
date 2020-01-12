@@ -1,0 +1,12 @@
+
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ßâÞ£üÿÿÿÿ
+\"squid:SwitchLastCaseIsDefaultCheckZ""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ÂÓ »ù-
+Rsquid:S1905."4Remove this unnecessary cast to "TextInputEditText".(ÒÆ™Ž8ßåò¸ù-
+esquid:UselessImportCheck":Remove this unused import 'javax.mail.MessagingException'.(ÇîÞ8¼†Ä¹ù-
+Rsquid:S1905-"4Remove this unnecessary cast to "TextInputEditText".(·¤»€8ßåò¸ù-
+psquid:S4499@"REnable server identity validation, set "mail.smtp.ssl.checkserveridentity" to true(’ß‡ƒ8òåôºù-
+Asquid:S1148P"#Use a logger to log this exception.(Ñ½€ˆ8òåôºù-
+Šsquid:S3252Q"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(â íÿÿÿÿÿ8òåôºù-
+Rsquid:S1905,"4Remove this unnecessary cast to "TextInputEditText".(´¬¡á8°Æñ¸ù-
+Šsquid:S3252N"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(À–Úùÿÿÿÿ8òåôºù-
+nsquid:S1301Z"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8ÂÓ »ù-

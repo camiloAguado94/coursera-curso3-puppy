@@ -1,4 +1,4 @@
-package com.camilo.puppyaplication.POJOs;
+package com.camilo.puppyaplication.pojo;
 
 public class MascotaPOJO {
 

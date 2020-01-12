@@ -8,11 +8,17 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
-import com.camilo.puppyaplication.Adapters.MascotasAdapter;
-import com.camilo.puppyaplication.POJOs.MascotaPOJO;
+import com.camilo.puppyaplication.adapters.MascotasAdapter;
+import com.camilo.puppyaplication.adapters.PageAdapter;
+import com.camilo.puppyaplication.fragments.PerfilMascotaFragment;
+import com.camilo.puppyaplication.fragments.RecyclerViewFragment;
+import com.camilo.puppyaplication.pojo.MascotaPOJO;
+import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -20,25 +26,27 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView reciclerViewMascotas;
-    private List<MascotaPOJO> listaMascotas;
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar actionBar = findViewById(R.id.mi_action_bar);
-        setSupportActionBar(actionBar);
+        toolbar = findViewById(R.id.mi_action_bar);
+        setSupportActionBar(toolbar);
 
-        reciclerViewMascotas = findViewById(R.id.rv_lista_mascotas);
-        crearDummys();
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        reciclerViewMascotas.setLayoutManager(linearLayoutManager);
-        initAdapter();
+        setUpViewPager();
 
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
     }
 
     @Override
@@ -49,12 +57,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.action_view:
-                Intent intent = new Intent(this, FavoritosActivity.class);
+                intent = new Intent(this, FavoritosActivity.class);
 
                 Gson gson = new Gson();
-                intent.putExtra("listaMascotas", gson.toJson(listaMascotas));
+                intent.putExtra("listaMascotas", gson.toJson(RecyclerViewFragment.listaMascotas));
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.menu_contacto:
+                intent = new Intent(this, ContactoActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.menu_about:
+                intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -63,17 +82,22 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void initAdapter() {
-        MascotasAdapter adapter = new MascotasAdapter(listaMascotas);
-        reciclerViewMascotas.setAdapter(adapter);
+
+
+    private ArrayList<Fragment> agregarFragments() {
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new PerfilMascotaFragment());
+        return fragments;
     }
 
-    private void crearDummys() {
-        listaMascotas = new ArrayList<>();
-        listaMascotas.add(new MascotaPOJO("Calvin", R.drawable.perro1, 1));
-        listaMascotas.add(new MascotaPOJO("Loqui", R.drawable.perro2, 5));
-        listaMascotas.add(new MascotaPOJO("Sam", R.drawable.perro3, 7));
-        listaMascotas.add(new MascotaPOJO("Bony", R.drawable.perro4, 2));
-        listaMascotas.add(new MascotaPOJO("Buck", R.drawable.perro5, 3));
+    private void setUpViewPager() {
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.dog_house);
+        tabLayout.getTabAt(1).setIcon(R.drawable.dog);
     }
+
+
 }

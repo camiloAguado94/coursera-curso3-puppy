@@ -1,4 +1,8 @@
 
-\"squid:SwitchLastCaseIsDefaultCheck4""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8¢™¤Ðô-
-nsquid:S13014"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8¢™¤Ðô-
-lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±Ž8…£Ïô-
+tsquid:S1450"VRemove the "toolbar" field and declare it as a local variable in the relevant methods.(þ®º—8þ¸ÑÑù-
+{squid:UselessImportCheck"PRemove this unused import 'com.camilo.puppyaplication.adapters.MascotasAdapter'.(£Äï¾8äœÒù-
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±Ž8…£Ïô-
+vsquid:UselessImportCheck"FRemove this unused import 'androidx.recyclerview.widget.RecyclerView'.(Îèòçøÿÿÿÿ8ü±•Òù-
+\"squid:SwitchLastCaseIsDefaultCheck=""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8¢™¤Ðô-
+ssquid:UselessImportCheck"HRemove this unused import 'com.camilo.puppyaplication.pojo.MascotaPOJO'.(Ûåˆá8äœÒù-
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ü±•Òù-

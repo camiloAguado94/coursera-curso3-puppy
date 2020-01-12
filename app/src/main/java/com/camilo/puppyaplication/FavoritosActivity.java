@@ -10,8 +10,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.camilo.puppyaplication.Adapters.MascotasAdapter;
-import com.camilo.puppyaplication.POJOs.MascotaPOJO;
+import com.camilo.puppyaplication.adapters.MascotasAdapter;
+import com.camilo.puppyaplication.pojo.MascotaPOJO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

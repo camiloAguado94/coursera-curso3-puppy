@@ -1,5 +1,5 @@
 
-Fsquid:S23866"(Make member "listaMascotas" "protected".(ùßŒÀ8±’ùÒù-
 Tsquid:S26966"6Make the enclosing method "static" or remove this set.(ùßŒÀ8±’ùÒù-
+Fsquid:S23866"(Make member "listaMascotas" "protected".(ùßŒÀ8±’ùÒù-
 "squid:ClassVariableVisibilityCheck"YMake listaMascotas a static final constant or non-public and provide accessors if needed.(Ìßñ¦8±’ùÒù-
 Qsquid:S1444"3Make this "public static listaMascotas" field final(Ìßñ¦8±’ùÒù-

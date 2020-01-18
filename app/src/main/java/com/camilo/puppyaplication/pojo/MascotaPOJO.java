@@ -2,15 +2,20 @@ package com.camilo.puppyaplication.pojo;
 
 public class MascotaPOJO {
 
+    private int id;
     private String nombre;
     private int foto;
     private Integer cantidadLikes;
     private boolean liked;
 
-    public MascotaPOJO(String nombre, int foto, int cantidadLikes) {
+    public MascotaPOJO(int id, String nombre, int foto, int cantidadLikes) {
+        this.id = id;
         this.nombre = nombre;
         this.foto = foto;
         this.cantidadLikes = cantidadLikes;
+    }
+
+    public MascotaPOJO() {
     }
 
     public String getNombre() {
@@ -43,5 +48,13 @@ public class MascotaPOJO {
 
     public void setLiked(boolean liked) {
         this.liked = liked;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -10,19 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.camilo.puppyaplication.adapters.MascotasAdapter;
 import com.camilo.puppyaplication.adapters.PageAdapter;
 import com.camilo.puppyaplication.fragments.PerfilMascotaFragment;
 import com.camilo.puppyaplication.fragments.RecyclerViewFragment;
-import com.camilo.puppyaplication.pojo.MascotaPOJO;
 import com.google.android.material.tabs.TabLayout;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_view:
                 intent = new Intent(this, FavoritosActivity.class);
-
-                Gson gson = new Gson();
-                intent.putExtra("listaMascotas", gson.toJson(RecyclerViewFragment.listaMascotas));
                 startActivity(intent);
                 finish();
                 break;

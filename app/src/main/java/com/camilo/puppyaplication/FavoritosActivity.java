@@ -10,17 +10,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.camilo.puppyaplication.adapters.MascotasAdapter;
+import com.camilo.puppyaplication.adapters.MascotasFavoritasAdapter;
+import com.camilo.puppyaplication.fragments.IRecyclerViewFragmentView;
 import com.camilo.puppyaplication.pojo.MascotaPOJO;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.camilo.puppyaplication.presentadores.IRecyclerViewFragmentPresenter;
+import com.camilo.puppyaplication.presentadores.RecyclerViewFavoritosPresenter;
 
 import java.util.List;
 
-public class FavoritosActivity extends AppCompatActivity {
+public class FavoritosActivity extends AppCompatActivity implements IRecyclerViewFragmentView {
 
     List<MascotaPOJO> listaMascotas;
     private RecyclerView reciclerViewMascotas;
+    private IRecyclerViewFragmentPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,23 +34,11 @@ public class FavoritosActivity extends AppCompatActivity {
         setSupportActionBar(actionBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Bundle bundle = getIntent().getExtras();
-        try {
+        setReciclerViewMascotas();
 
-            Gson gson = new Gson();
-            listaMascotas = gson.fromJson(bundle.getString("listaMascotas"), new TypeToken<List<MascotaPOJO>>() {
-            }.getType());
-            reciclerViewMascotas = findViewById(R.id.rv_favoritos);
-
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-            linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            reciclerViewMascotas.setLayoutManager(linearLayoutManager);
-            MascotasAdapter adapter = new MascotasAdapter(listaMascotas);
-            reciclerViewMascotas.setAdapter(adapter);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (actionBar != null) {
+            setSupportActionBar(actionBar);
         }
-
 
     }
 
@@ -64,4 +54,27 @@ public class FavoritosActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void setReciclerViewMascotas() {
+        reciclerViewMascotas = findViewById(R.id.rv_favoritos);
+        presenter = new RecyclerViewFavoritosPresenter(this, this);
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        reciclerViewMascotas.setLayoutManager(linearLayoutManager);
+    }
+
+    @Override
+    public MascotasFavoritasAdapter crearAdaptador(List<MascotaPOJO> listaMascotas) {
+        return new MascotasFavoritasAdapter(listaMascotas);
+    }
+
+    @Override
+    public void initAdapter(RecyclerView.Adapter adapter) {
+        reciclerViewMascotas.setAdapter(adapter);
+    }
+
 }
